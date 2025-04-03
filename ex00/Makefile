@@ -6,7 +6,7 @@
 #    By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/03 13:05:34 by hali-mah          #+#    #+#              #
-#    Updated: 2025/04/03 13:06:50 by hali-mah         ###   ########.fr        #
+#    Updated: 2025/04/03 15:37:41 by hali-mah         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = ClapTrap
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
 
-SRCS = main.cpp ClapTrap.cpp ClapTrap.hpp
+SRCS = main.cpp ClapTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
