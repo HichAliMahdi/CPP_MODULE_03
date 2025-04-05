@@ -6,31 +6,42 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 13:08:10 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/03 15:38:35 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/04/05 19:23:59 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
-    ClapTrap robot("Clappy");
+    std::cout << "Creating ClapTrap" << std::endl;
+    ClapTrap clappy("Clappy");
 
+    std::cout << "Creating ScavTrap" << std::endl;
+    ScavTrap scavvy("Scavvy");
+    
     std::cout << "\n--- Testing Attack ---\n";
-    robot.attack("TargetBot");
+    clappy.attack("Target Dummy");
+    scavvy.attack("Bad Guy");
 
-    std::cout << "\n--- Testing Take Damage ---\n";
-    robot.takeDamage(5);
-    robot.takeDamage(6);
-
-    std::cout << "\n--- Testing Repair ---\n";
-    robot.beRepaired(5);
-
-    std::cout << "\n--- Testing Energy Consumption ---\n";
-    ClapTrap anotherBot("EnergyBot");
-    for (int i = 0; i < 11; i++)
-        anotherBot.attack("DummyBot");
-    anotherBot.beRepaired(5);
-
+    std::cout << "\n=== TESTING TAKE DAMAGE ===" << std::endl;
+    clappy.takeDamage(5);
+    scavvy.takeDamage(30);
+    
+    std::cout << "\n=== TESTING REPAIR ===" << std::endl;
+    clappy.beRepaired(3);
+    scavvy.beRepaired(10);
+    
+    std::cout << "\n=== TESTING SPECIAL ABILITY ===" << std::endl;
+    scavvy.guardGate();
+    
+    std::cout << "\n=== TESTING ENERGY LIMITS ===" << std::endl;
+    // Let's make ScavTrap run out of energy
+    for (int i = 0; i < 10; i++) {
+        scavvy.attack("Energy Drain Test");
+    }
+    
+    std::cout << "\n=== END OF PROGRAM, DESTRUCTORS WILL BE CALLED ===" << std::endl;
     return 0;
 }
