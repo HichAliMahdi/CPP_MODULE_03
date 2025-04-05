@@ -6,7 +6,7 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 19:01:58 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/05 19:07:54 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/04/05 19:13:40 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class ScavTrap : public ClapTrap
         ~ScavTrap();
 
         void    attack(const std::string& target);
+        void    guardGate();
 };
 
 #endif
