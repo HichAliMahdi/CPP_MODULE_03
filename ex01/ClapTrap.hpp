@@ -6,7 +6,7 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 13:07:03 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/03 13:14:54 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/04/05 19:11:48 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string _Name;
         int         _Hit_points;
         int         _Energy_points;
