@@ -6,7 +6,7 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 13:08:10 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/05 19:23:59 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/04/05 19:25:54 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 int main()
 {
-    std::cout << "Creating ClapTrap" << std::endl;
+    std::cout << "=== CREATING CLAPTRAP ===" << std::endl;
     ClapTrap clappy("Clappy");
-
-    std::cout << "Creating ScavTrap" << std::endl;
+    
+    std::cout << "\n=== CREATING SCAVTRAP ===" << std::endl;
     ScavTrap scavvy("Scavvy");
     
     std::cout << "\n--- Testing Attack ---\n";
