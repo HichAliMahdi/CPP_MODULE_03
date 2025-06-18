@@ -6,7 +6,7 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 13:08:10 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/05 19:37:27 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/06/18 17:37:28 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-int main()
+int main( void )
 {
     std::cout << "=== CREATING CLAPTRAP ===" << std::endl;
     ClapTrap clappy("Clappy");
@@ -22,8 +22,17 @@ int main()
     std::cout << "\n=== CREATING SCAVTRAP ===" << std::endl;
     ScavTrap scavvy("Scavvy");
 
-    std::cout << "\n=== CREATING FRAGTRAP ===" << std::endl;
+    std::cout << "\n=== CREATING FRAGTRAP (PARAMETERIZED) ===" << std::endl;
     FragTrap fraggy("Fraggy");
+
+    std::cout << "\n=== CREATING FRAGTRAP (DEFAULT) ===" << std::endl;
+    FragTrap defaultFrag;
+
+    std::cout << "\n=== COPYING FRAGTRAP ===" << std::endl;
+    FragTrap copiedFrag(fraggy);
+
+    std::cout << "\n=== ASSIGNING FRAGTRAP ===" << std::endl;
+    defaultFrag = fraggy;
 
     std::cout << "\n--- Testing Attack ---\n";
     clappy.attack("Target Dummy");
@@ -43,7 +52,7 @@ int main()
     std::cout << "\n=== TESTING SPECIAL ABILITIES ===" << std::endl;
     scavvy.guardGate();
     fraggy.highFivesGuys();
-    
+
     std::cout << "\n=== TESTING ENERGY LIMITS ===" << std::endl;
     // Let's make FragTrap use a lot of energy
     for (int i = 0; i < 5; i++) {

@@ -6,23 +6,26 @@
 /*   By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 19:30:37 by hali-mah          #+#    #+#             */
-/*   Updated: 2025/04/05 19:32:43 by hali-mah         ###   ########.fr       */
+/*   Updated: 2025/06/18 17:36:24 by hali-mah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
 #include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap
 {
-    public:
-        FragTrap( std::string name);
-        ~FragTrap();
+public:
+    FragTrap();                         // Default constructor
+    FragTrap(const std::string& name); // Parameterized constructor
+    FragTrap(const FragTrap& other);   // Copy constructor
+    FragTrap& operator=(const FragTrap& other); // Copy assignment operator
+    ~FragTrap();                       // Destructor
 
-        void    attack(const std::string& target);
-        void    highFivesGuys(void);
+    void attack(const std::string& target);
+    void highFivesGuys(void);
 };
 
 #endif
