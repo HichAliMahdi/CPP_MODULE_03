@@ -6,12 +6,12 @@
 #    By: hali-mah <hali-mah@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/03 13:05:34 by hali-mah          #+#    #+#              #
-#    Updated: 2025/04/05 19:24:41 by hali-mah         ###   ########.fr        #
+#    Updated: 2025/06/18 17:17:22 by hali-mah         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ScavTrap
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++17
 CC = c++
 
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
